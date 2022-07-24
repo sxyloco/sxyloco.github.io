@@ -1,0 +1,729 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+  <head>
+  <meta charset="UTF-8">
+  <meta 
+    name="viewport"
+    content="width=device-width, initial-scale=1.0, minimum-scale=1.0">
+  <meta 
+    http-equiv="X-UA-Compatible" 
+    content="ie=edge">
+  <meta 
+    name="theme-color" 
+    content="#fff" 
+    id="theme-color">
+  <meta 
+    name="description" 
+    content="blog">
+  <link 
+    rel="icon" 
+    href="https://img.haote.com/upload/news/20190817/156601000846251.jpeg">
+  <title>个人博客</title>
+  
+    
+      <meta 
+        property="og:title" 
+        content="个人博客">
+    
+    
+      <meta 
+        property="og:url" 
+        content="http://example.com/2022/07/24/%E6%95%B0%E6%8D%AE%E7%B1%BB%E5%9E%8B%E6%A3%80%E6%B5%8B/index.html">
+    
+    
+      <meta 
+        property="og:img" 
+        content="https://pic3.zhimg.com/80/v2-4a745c053c660ba2883f33bfcdb1dafe_1440w.jpg">
+    
+    
+      <meta 
+        property="og:img" 
+        content="blog">
+    
+    
+      <meta 
+        property="og:type" 
+        content="article">
+      <meta 
+        property="og:article:published_time" 
+        content="2022-07-24">
+      <meta 
+        property="og:article:modified_time" 
+        content="2022-07-24">
+      <meta 
+        property="og:article:author" 
+        content="sxy">
+      
+        
+      
+    
+  
+  <script>
+    function loadScript(url, cb) {
+      var script = document.createElement('script');
+      script.src = url;
+      if (cb) script.onload = cb;
+      script.async = true;
+      document.body.appendChild(script);
+    }
+    function loadCSS(href, data, attr) {
+      var sheet = document.createElement('link');
+      sheet.ref = 'stylesheet';
+      sheet.href = href;
+      sheet.dataset[data] = attr;
+      document.head.appendChild(sheet);
+    }
+    function changeCSS(cssFile, data, attr) {
+      var oldlink = document.querySelector(data);
+      var newlink = document.createElement("link");
+      newlink.setAttribute("rel", "stylesheet");
+      newlink.setAttribute("href", cssFile);
+      newlink.dataset.prism = attr;
+      document.head.replaceChild(newlink, oldlink);
+    }
+  </script>
+  
+    
+  
+  <script>
+    // control reverse button
+    var reverseDarkList = {
+      dark: 'light',
+      light: 'dark'
+    };
+    var themeColor = {
+      dark: '#1c1c1e',
+      light: '#fff'
+    }
+    // get the data of css prefers-color-scheme
+    var getCssMediaQuery = function() {
+      return window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light';
+    };
+    // reverse current darkmode setting function
+    var reverseDarkModeSetting = function() {
+      var setting = localStorage.getItem('user-color-scheme');
+      if(reverseDarkList[setting]) {
+        setting = reverseDarkList[setting];
+      } else if(setting === null) {
+        setting = reverseDarkList[getCssMediaQuery()];
+      } else {
+        return;
+      }
+      localStorage.setItem('user-color-scheme', setting);
+      return setting;
+    };
+    // apply current darkmode setting
+  </script>
+  
+    <script>
+      var setDarkmode = function(mode) {
+      var setting = mode || localStorage.getItem('user-color-scheme');
+      if(setting === getCssMediaQuery()) {
+        document.documentElement.removeAttribute('data-user-color-scheme');
+        localStorage.removeItem('user-color-scheme');
+        document.getElementById('theme-color').content = themeColor[setting];
+        document.getElementById('theme-color').dataset.mode = setting;
+      } else if(reverseDarkList[setting]) {
+        document.documentElement.setAttribute('data-user-color-scheme', setting);
+        document.getElementById('theme-color').content = themeColor[setting];
+        document.getElementById('theme-color').dataset.mode = setting;
+      } else {
+        document.documentElement.removeAttribute('data-user-color-scheme');
+        localStorage.removeItem('user-color-scheme');
+        document.getElementById('theme-color').content = themeColor[getCssMediaQuery()];
+        document.getElementById('theme-color').dataset.mode = getCssMediaQuery();
+      }
+    };
+    setDarkmode();
+    </script>
+  
+  
+  <link rel="preload" href="//at.alicdn.com/t/font_1946621_i1kgafibvw.css" as="style" >
+  <link rel="preload" href="//at.alicdn.com/t/font_1952792_89b4ac4k4up.css" as="style" >
+  
+  
+    <link rel="preload" href="/js/lib/lightbox/baguetteBox.min.js" as="script">
+    <link rel="preload" href="/js/lib/lightbox/baguetteBox.min.css" as="style" >
+  
+  
+    <link rel="preload" href="/js/lib/lozad.min.js" as="script">
+  
+  
+  
+  
+  
+  
+  
+  <link rel="stylesheet" href="/css/main.css">
+  
+  <link rel="stylesheet" href="//at.alicdn.com/t/font_1946621_i1kgafibvw.css">
+  
+  <link rel="stylesheet" href="//at.alicdn.com/t/font_1952792_89b4ac4k4up.css">
+  
+    <link rel="stylesheet" href="/js/lib/lightbox/baguetteBox.min.css">
+  
+<meta name="generator" content="Hexo 5.4.0"></head>
+
+  <body>
+    <div class="wrapper">
+       
+      <nav class="navbar">
+  <div class="navbar-logo">
+    <span class="navbar-logo-main">
+      
+        <img 
+          class="navbar-logo-img"
+          width="32"
+          height="32"
+          src="https://img.haote.com/upload/news/20190817/156601000846251.jpeg" 
+          alt="blog logo">
+      
+      <span class="navbar-logo-dsc">个人博客</span>
+    </span>
+  </div>
+  <div class="navbar-menu">
+    
+      <a 
+        href="/" 
+        class="navbar-menu-item">
+        
+          首页
+        
+      </a>
+    
+      <a 
+        href="/archives" 
+        class="navbar-menu-item">
+        
+          归档
+        
+      </a>
+    
+      <a 
+        href="/tags" 
+        class="navbar-menu-item">
+        
+          标签
+        
+      </a>
+    
+      <a 
+        href="/categories" 
+        class="navbar-menu-item">
+        
+          分类
+        
+      </a>
+    
+      <a 
+        href="/about" 
+        class="navbar-menu-item">
+        
+          关于
+        
+      </a>
+    
+      <a 
+        href="/links" 
+        class="navbar-menu-item">
+        
+          友链
+        
+      </a>
+    
+    <a 
+      class="navbar-menu-item darknavbar" 
+      id="dark">
+      <i class="iconfont icon-weather"></i>
+    </a>
+    <a 
+      class="navbar-menu-item searchnavbar" 
+      id="search">
+      <i 
+        class="iconfont icon-search" 
+        style="font-size: 1.2rem; font-weight: 400;">
+      </i>
+    </a>
+  </div>
+</nav> 
+      
+      <div 
+        id="local-search" 
+        style="display: none">
+        <input
+          class="navbar-menu-item"
+          id="search-input"
+          placeholder="请输入搜索内容..." />
+        <div id="search-content"></div>
+      </div>
+      
+      <div class="section-wrap">
+        <div class="container">
+          <div class="columns">
+            <main class="main-column">
+<article class="card card-content">
+  <header>
+    <h1 class="post-title">
+      
+    </h1>
+  </header>
+  <div class="post-meta post-show-meta">
+    <time datetime="2022-07-24T14:08:09.337Z">
+      <i 
+        class="iconfont icon-calendar" 
+        style="margin-right: 2px;">
+      </i>
+      <span>2022-07-24</span>
+    </time>
+    
+    
+      <span class="dot"></span>
+      <span>1.2k 字</span>
+    
+  </div>
+  
+  </header>
+  <div 
+    id="section" 
+    class="post-content">
+    <h1 id="数据类型检测"><a href="#数据类型检测" class="headerlink" title="数据类型检测"></a>数据类型检测</h1><h3 id="typeof"><a href="#typeof" class="headerlink" title="typeof"></a><strong>typeof</strong></h3><blockquote>
+<p>typeof[value]：用来检测数据类型的运算符</p>
+<p><strong>return 返回值</strong></p>
+<ul>
+<li>首先是个字符串</li>
+<li>字符串中包含对应的数据类型，例如：’number’ 、’object’、’undefined’、’symbol’、’function’</li>
+</ul>
+<p>局限性</p>
+<ul>
+<li>typeof null =&gt; “object” 二进制 null–&gt;000 对象类型—&gt; 000</li>
+<li>不能具体区分对象数据类型的值（无法检测是正则还是数组等）</li>
+</ul>
+<p>优势</p>
+<p>使用方便，特别是检测基本类型值（除null），还有函数类型值</p>
+</blockquote>
+<h3 id="instanceof"><a href="#instanceof" class="headerlink" title="instanceof"></a><strong>instanceof</strong></h3><blockquote>
+<p>本意是用来检测实例是否隶属于某个类的运算，基于这种方式，也可做某些数据类型检测，如数组、正则…</p>
+<p>@局限性</p>
+<p>不能处理基本类型的值</p>
+<p>只要再当前实例的原型链（__ proto <strong>）中出现过的类，检测结果都是true （用户可能手动修改原型链的指向：example.</strong> proto __或者类的继承中 等情况）</p>
+</blockquote>
+<h3 id="constructor-NaN"><a href="#constructor-NaN" class="headerlink" title="constructor"></a><strong>constructor</strong></h3><blockquote>
+<p>原理：在类的原型上一般都会带有constructor属性，存储当前类本身，利用这一点，验证是否为所属类，从而进行数据类型检测</p>
+<p>@局限性：constructor属性值太容易被修改</p>
+</blockquote>
+<h3 id="Object-prototype-toString-call-value"><a href="#Object-prototype-toString-call-value" class="headerlink" title="Object.prototype.toString.call([value])"></a><strong>Object.prototype.toString.call([value])</strong></h3><blockquote>
+<p>调用Object原型上的toString方法，让方法执行的时候，方法中的this是要检测的数据类型，从而 获取到数据类型所属类的详细</p>
+</blockquote>
+<p><strong>@信息模块</strong></p>
+<p>“[object 所属类]”，例如：”[object Array]”…</p>
+<p>在所有的数据类型中，他们原型上都有toString方法，除object.prototype.toString不是把数据值转换为字符串，其余的都是转换为字符串，而object原型上的toString是检测当前实例隶属类的详细信息的（检测数据类型）</p>
+<p><strong>obj.toString()</strong></p>
+<ul>
+<li>首先基于原型链查找机制，找到object.prototype.toString</li>
+<li>把找到的方法执行，方法中的this–&gt; obj</li>
+<li>方法内部把this（obj）的所属类信息输出  =&gt;方法执行，方法中的this是谁，就是检测书的所属类信息</li>
+</ul>
+<h3 id="检测数据类型-方法封装"><a href="#检测数据类型-方法封装" class="headerlink" title="检测数据类型 方法封装"></a><strong>检测数据类型 方法封装</strong></h3><blockquote>
+<p>老版JQ采用的形式</p>
+</blockquote>
+<pre class="highlight"><span class="line"><span class="keyword">let</span> _obj = &#123;</span><br><span class="line">    <span class="attr">isString</span>:<span class="string">&#x27;String&#x27;</span>,</span><br><span class="line">    <span class="attr">isBoolean</span>:<span class="string">&#x27;Boolean&#x27;</span>,</span><br><span class="line">    <span class="attr">isNumeric</span>:<span class="string">&#x27;Number&#x27;</span>,</span><br><span class="line">    <span class="attr">isNull</span>:<span class="string">&#x27;Null&#x27;</span>,</span><br><span class="line">    <span class="attr">isUndefined</span>:<span class="string">&#x27;Undefined&#x27;</span>,</span><br><span class="line">    <span class="attr">isPlantObject</span>:<span class="string">&#x27;Object&#x27;</span>,</span><br><span class="line">    <span class="attr">isSymbol</span>:<span class="string">&#x27;Symbol&#x27;</span>,</span><br><span class="line">    <span class="attr">isArray</span>:<span class="string">&#x27;Array&#x27;</span>,</span><br><span class="line">    <span class="attr">isDate</span>:<span class="string">&#x27;Date&#x27;</span>,</span><br><span class="line">    <span class="attr">isMath</span>:<span class="string">&#x27;Math&#x27;</span>,</span><br><span class="line">    <span class="attr">isRegExp</span>:<span class="string">&#x27;RegExp&#x27;</span>,</span><br><span class="line">    <span class="attr">isWindow</span>:<span class="string">&#x27;Window&#x27;</span></span><br><span class="line">  &#125;,</span><br><span class="line">  _toString = _obj.toString,</span><br><span class="line">  _type = &#123;&#125;;</span><br><span class="line">  <span class="keyword">for</span> (<span class="keyword">const</span> key <span class="keyword">in</span> _obj) &#123;</span><br><span class="line">    <span class="keyword">if</span> (!_obj.hasOwnProperty(key)) <span class="keyword">break</span></span><br><span class="line">    <span class="keyword">let</span> reg = <span class="keyword">new</span> <span class="built_in">RegExp</span>(<span class="string">&#x27;\\[object &#x27;</span>+_obj[key]+<span class="string">&#x27;\\]&#x27;</span>)</span><br><span class="line">    _type[key] = <span class="function"><span class="keyword">function</span>(<span class="params">value</span>)</span>&#123;</span><br><span class="line">      <span class="keyword">return</span> reg.test(_toString.call(value))</span><br><span class="line">    &#125;</span><br><span class="line">  &#125;</span><br><span class="line">  <span class="built_in">console</span>.log(_type.isNumeric(<span class="number">0</span>))</span><br></pre>
+
+<h3 id="Number-转换"><a href="#Number-转换" class="headerlink" title="Number 转换"></a>Number 转换</h3><h3 id="加号除了数字运算还有字符串拼接"><a href="#加号除了数字运算还有字符串拼接" class="headerlink" title="加号除了数字运算还有字符串拼接"></a><strong>加号除了数字运算还有字符串拼接</strong></h3><h3 id="Number-NaN-isNaN-infinity-parseInt-Number"><a href="#Number-NaN-isNaN-infinity-parseInt-Number" class="headerlink" title="Number : NaN /isNaN/infinity/parseInt/Number()"></a><strong>Number : NaN /isNaN/infinity/parseInt/Number()</strong></h3><h3 id="把其他类型转换为数字的方法"><a href="#把其他类型转换为数字的方法" class="headerlink" title="把其他类型转换为数字的方法"></a><strong>把其他类型转换为数字的方法</strong></h3><ul>
+<li>Number()它是按照浏览器从底层机制，把其他数据类型转化为数字<ul>
+<li>字符串：看是否包含非有效数字，包含非有效数字结果就是NaN;’’=&gt;0;<ul>
+<li>引申: 遵循按照字符串从左到右查找的机制找有效数字字符(所以传递的值一定是字符串，不是也要转换为字符串然后再查找) 与Number()函数运行的底层机制并不一样</li>
+<li>parseInt()=&gt;字符串非有效数字之前的数字整数部分，parseFloat()=&gt; 字符串非有效数字(除第一个小数点之外)之前的数字部分</li>
+</ul>
+  <pre class="highlight"><span class="line"><span class="built_in">parseInt</span>(<span class="string">&#x27;a23123&#x27;</span>) =&gt; <span class="literal">NaN</span></span><br><span class="line"><span class="built_in">parseInt</span>(<span class="string">&#x27;23123a&#x27;</span>) =&gt; <span class="number">23123</span></span><br><span class="line"><span class="built_in">parseInt</span>(<span class="string">&#x27;undefined&#x27;</span>) =&gt; <span class="built_in">parseInt</span>(<span class="string">&#x27;undefined&#x27;</span>) =&gt; <span class="literal">NaN</span></span><br><span class="line"><span class="built_in">parseInt</span>(<span class="string">&#x27;&#x27;</span>) =&gt; <span class="literal">NaN</span> <span class="comment">// 因为没有找到有效数字</span></span><br></pre>
+</li>
+<li>布尔：true -&gt; 1; false-&gt;0</li>
+<li>null:  -&gt; 0</li>
+<li>undefined: -&gt; NaN</li>
+<li>引用数据类型先转换为字符串在转换为数字<ul>
+<li>{}/正则/函数等 -&gt; NaN</li>
+<li>[] -&gt; ‘’ -&gt; 0</li>
+<li>[‘12’] -&gt; ‘12’ -&gt; 12</li>
+<li>[‘21’,’23’] -&gt; ‘21,23’ NaN</li>
+</ul>
+</li>
+<li>isNaN 遇到不是数字的会调Number()的转换机制</li>
+</ul>
+</li>
+<li>强转化（基于底层机制转换的）Number([value])<ul>
+<li>isNaN(‘12px’)<blockquote>
+<p><strong>规则</strong> ：在使用 isNaN进行检测的时候，首先会验证检测的值是否为数字类型，如果不是，先基于Number()这个方法，把值转换为数字类型，然后再检测</p>
+</blockquote>
+<blockquote>
+<p><strong>isNaN([val])</strong> <code>[val]中的[]: 参数描述占位符</code></p>
+</blockquote>
+<ol>
+<li>数字类型值进行数学运算只要有NaN参与,执行结果都是NaN；</li>
+<li>如果是加法运算 , 有一个是字符串，那么，执行字符串拼接操作；<blockquote>
+</blockquote>
+</li>
+</ol>
+</li>
+<li>数学运算  <pre class="highlight"><span class="line"><span class="keyword">let</span> res = <span class="string">&#x27;3&#x27;</span> + <span class="number">2</span></span><br></pre>
+</li>
+<li>两个等号（==）<ul>
+<li>对象==字符串 对象转换为字符串</li>
+<li>null==undefined 但是和其他值都不想等</li>
+<li>剩下两边不同都转换为数字</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>弱转换（基于一些额外的方法转换）parseInt([value])/parseFloat([value])<ul>
+<li>parseInt([value]<blockquote>
+<p>字符串非有效数字之前的数字整数部分</p>
+</blockquote>
+</li>
+<li>parseFloat([value])<blockquote>
+<p>字符串非有效数字(除第一个小数点之外)之前的数字部分</p>
+</blockquote>
+</li>
+</ul>
+</li>
+</ul>
+
+  </div>
+  <div>
+    
+      <div 
+        class="post-note note-warning copyright" 
+        style="margin-top: 42px">
+        <p>
+          <span style="font-weight: bold;">作者：</span><a 
+            target="_blank" 
+            rel="nofollow noopener noreferrer" 
+            href="/about">
+            sxy
+          </a>
+        </p>
+        <p>
+          <span style="font-weight: bold;">文章链接：</span><a 
+            target="_blank" 
+            rel="nofollow noopener noreferrer" 
+            href="http://example.com/2022/07/24/%E6%95%B0%E6%8D%AE%E7%B1%BB%E5%9E%8B%E6%A3%80%E6%B5%8B/">
+            http://example.com/2022/07/24/%E6%95%B0%E6%8D%AE%E7%B1%BB%E5%9E%8B%E6%A3%80%E6%B5%8B/
+          </a>
+        </p>
+        <p><span style="font-weight: bold;">版权声明：</span>本博客所有文章除特别声明外，均采用<a target="_blank" rel="noopener" href="https://creativecommons.org/licenses/by-nc-sa/4.0/deed.zh">CC BY-NC-SA 4.0 协议</a>。转载请注明出处！</p>
+      </div>
+    
+  </div>
+</article>
+<div class="nav">
+  
+  
+    <div class="nav-item-next">
+      <a 
+        href="/2021/12/04/test/" 
+        class="nav-link">
+        <div>
+          <div class="nav-label">下一篇</div>
+          
+            <div class="nav-title">test </div>
+          
+        </div>
+        <i class="iconfont icon-right nav-next-icon"></i>
+      </a>
+    </div>
+  
+</div>
+
+<div 
+  class="card card-content toc-card" 
+  id="mobiletoc">
+  <div class="toc-header">
+  <i 
+    class="iconfont icon-menu" 
+    style="padding-right: 2px;">
+  </i>目录
+</div>
+<ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#%E6%95%B0%E6%8D%AE%E7%B1%BB%E5%9E%8B%E6%A3%80%E6%B5%8B"><span class="toc-text">数据类型检测</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#typeof"><span class="toc-text">typeof</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#instanceof"><span class="toc-text">instanceof</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#constructor-NaN"><span class="toc-text">constructor</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Object-prototype-toString-call-value"><span class="toc-text">Object.prototype.toString.call([value])</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E6%A3%80%E6%B5%8B%E6%95%B0%E6%8D%AE%E7%B1%BB%E5%9E%8B-%E6%96%B9%E6%B3%95%E5%B0%81%E8%A3%85"><span class="toc-text">检测数据类型 方法封装</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Number-%E8%BD%AC%E6%8D%A2"><span class="toc-text">Number 转换</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%8A%A0%E5%8F%B7%E9%99%A4%E4%BA%86%E6%95%B0%E5%AD%97%E8%BF%90%E7%AE%97%E8%BF%98%E6%9C%89%E5%AD%97%E7%AC%A6%E4%B8%B2%E6%8B%BC%E6%8E%A5"><span class="toc-text">加号除了数字运算还有字符串拼接</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Number-NaN-isNaN-infinity-parseInt-Number"><span class="toc-text">Number : NaN &#x2F;isNaN&#x2F;infinity&#x2F;parseInt&#x2F;Number()</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E6%8A%8A%E5%85%B6%E4%BB%96%E7%B1%BB%E5%9E%8B%E8%BD%AC%E6%8D%A2%E4%B8%BA%E6%95%B0%E5%AD%97%E7%9A%84%E6%96%B9%E6%B3%95"><span class="toc-text">把其他类型转换为数字的方法</span></a></li></ol></li></ol></li></ol>
+</div></main>
+            <aside class="left-column">
+              
+              <div class="card card-author">
+                
+  <img 
+    src="https://pic3.zhimg.com/80/v2-4a745c053c660ba2883f33bfcdb1dafe_1440w.jpg" 
+    class="author-img"
+    width="88"
+    height="88"
+    alt="author avatar">
+
+<p class="author-name">sxy</p>
+<p class="author-description">这是一个博客</p>
+<div class="author-message">
+  <a 
+    class="author-posts-count" 
+    href="/archives">
+    <span>3</span>
+    <span>文章</span>
+  </a>
+  <a 
+    class="author-categories-count" 
+    href="/categories">
+    <span>0</span>
+    <span>分类</span>
+  </a>
+  <a 
+    class="author-tags-count" 
+    href="/tags">
+    <span>0</span>
+    <span>标签</span>
+  </a>
+</div>
+
+              </div>
+               <div class="sticky-tablet">
+  
+  
+    <article class="display-when-two-columns spacer">
+      <div class="card card-content toc-card">
+        <div class="toc-header">
+  <i 
+    class="iconfont icon-menu" 
+    style="padding-right: 2px;">
+  </i>目录
+</div>
+<ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#%E6%95%B0%E6%8D%AE%E7%B1%BB%E5%9E%8B%E6%A3%80%E6%B5%8B"><span class="toc-text">数据类型检测</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#typeof"><span class="toc-text">typeof</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#instanceof"><span class="toc-text">instanceof</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#constructor-NaN"><span class="toc-text">constructor</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Object-prototype-toString-call-value"><span class="toc-text">Object.prototype.toString.call([value])</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E6%A3%80%E6%B5%8B%E6%95%B0%E6%8D%AE%E7%B1%BB%E5%9E%8B-%E6%96%B9%E6%B3%95%E5%B0%81%E8%A3%85"><span class="toc-text">检测数据类型 方法封装</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Number-%E8%BD%AC%E6%8D%A2"><span class="toc-text">Number 转换</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%8A%A0%E5%8F%B7%E9%99%A4%E4%BA%86%E6%95%B0%E5%AD%97%E8%BF%90%E7%AE%97%E8%BF%98%E6%9C%89%E5%AD%97%E7%AC%A6%E4%B8%B2%E6%8B%BC%E6%8E%A5"><span class="toc-text">加号除了数字运算还有字符串拼接</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Number-NaN-isNaN-infinity-parseInt-Number"><span class="toc-text">Number : NaN &#x2F;isNaN&#x2F;infinity&#x2F;parseInt&#x2F;Number()</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E6%8A%8A%E5%85%B6%E4%BB%96%E7%B1%BB%E5%9E%8B%E8%BD%AC%E6%8D%A2%E4%B8%BA%E6%95%B0%E5%AD%97%E7%9A%84%E6%96%B9%E6%B3%95"><span class="toc-text">把其他类型转换为数字的方法</span></a></li></ol></li></ol></li></ol>
+      </div>
+    </article>
+  
+  
+  <article class="card card-content categories-widget">
+    <div class="categories-card">
+  <div class="categories-header">
+    <i 
+      class="iconfont icon-fenlei" 
+      style="padding-right: 2px;">
+    </i>分类
+  </div>
+  <div class="categories-list">
+    
+  </div>
+</div>
+  </article>
+  
+  <article class="card card-content tags-widget">
+    <div class="tags-card">
+  <div class="tags-header">
+    <i 
+      class="iconfont icon-biaoqian" 
+      style="padding-right: 2px;">
+    </i>热门标签
+  </div>
+  <div class="tags-list">
+    
+  </div>
+</div>
+  </article>
+  
+  
+</div>
+            </aside>
+            <aside class="right-column">
+              <div class="sticky-widescreen">
+  
+  
+    <article class="card card-content toc-card">
+      <div class="toc-header">
+  <i 
+    class="iconfont icon-menu" 
+    style="padding-right: 2px;">
+  </i>目录
+</div>
+<ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#%E6%95%B0%E6%8D%AE%E7%B1%BB%E5%9E%8B%E6%A3%80%E6%B5%8B"><span class="toc-text">数据类型检测</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#typeof"><span class="toc-text">typeof</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#instanceof"><span class="toc-text">instanceof</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#constructor-NaN"><span class="toc-text">constructor</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Object-prototype-toString-call-value"><span class="toc-text">Object.prototype.toString.call([value])</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E6%A3%80%E6%B5%8B%E6%95%B0%E6%8D%AE%E7%B1%BB%E5%9E%8B-%E6%96%B9%E6%B3%95%E5%B0%81%E8%A3%85"><span class="toc-text">检测数据类型 方法封装</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Number-%E8%BD%AC%E6%8D%A2"><span class="toc-text">Number 转换</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%8A%A0%E5%8F%B7%E9%99%A4%E4%BA%86%E6%95%B0%E5%AD%97%E8%BF%90%E7%AE%97%E8%BF%98%E6%9C%89%E5%AD%97%E7%AC%A6%E4%B8%B2%E6%8B%BC%E6%8E%A5"><span class="toc-text">加号除了数字运算还有字符串拼接</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Number-NaN-isNaN-infinity-parseInt-Number"><span class="toc-text">Number : NaN &#x2F;isNaN&#x2F;infinity&#x2F;parseInt&#x2F;Number()</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E6%8A%8A%E5%85%B6%E4%BB%96%E7%B1%BB%E5%9E%8B%E8%BD%AC%E6%8D%A2%E4%B8%BA%E6%95%B0%E5%AD%97%E7%9A%84%E6%96%B9%E6%B3%95"><span class="toc-text">把其他类型转换为数字的方法</span></a></li></ol></li></ol></li></ol>
+    </article>
+  
+  
+  <article class="card card-content">
+    <div class="recent-posts-card">
+  <div class="recent-posts-header">
+    <i 
+      class="iconfont icon-wenzhang_huaban" 
+      style="padding-right: 2px;">
+    </i>最近文章
+  </div>
+  <div class="recent-posts-list">
+    
+      <div class="recent-posts-item">
+        <div class="recent-posts-item-title">2022-07-24</div>
+        <a href="/2022/07/24/%E6%95%B0%E6%8D%AE%E7%B1%BB%E5%9E%8B%E6%A3%80%E6%B5%8B/"><div class="recent-posts-item-content"></div></a>
+      </div>
+    
+      <div class="recent-posts-item">
+        <div class="recent-posts-item-title">2021-12-04</div>
+        <a href="/2021/12/04/test/"><div class="recent-posts-item-content">test</div></a>
+      </div>
+    
+      <div class="recent-posts-item">
+        <div class="recent-posts-item-title">2021-12-04</div>
+        <a href="/2021/12/04/hello-world/"><div class="recent-posts-item-content">Hello World</div></a>
+      </div>
+    
+  </div>
+</div>
+  </article>
+  
+  
+</div>
+            </aside>
+          </div>
+        </div>
+      </div>
+    </div>
+     
+    <footer class="footer">
+  <div class="footer-container">
+    <div>
+      <div class="footer-dsc">
+        <span>
+          Copyright ©
+          
+            2020 -
+          
+          2022
+        </span>
+        &nbsp;
+        <a 
+          href="/" 
+          class="footer-link">
+          个人博客
+        </a>
+      </div>
+    </div>
+
+    
+      <div class="footer-dsc">
+        
+          Powered by
+          <a 
+            href="https://hexo.io/" 
+            class="footer-link" 
+            target="_blank" 
+            rel="nofollow noopener noreferrer">
+            &nbsp;Hexo
+          </a>
+        
+        
+          <span>&nbsp;|&nbsp;</span>
+        
+        
+          Theme -
+          <a 
+            href="https://github.com/theme-kaze" 
+            class="footer-link" 
+            target="_blank"
+            rel="nofollow noopener noreferrer">
+            &nbsp;Kaze
+          </a>
+        
+      </div>
+    
+    
+    
+    
+</footer> 
+    
+  <a 
+    role="button" 
+    id="scrollbutton" 
+    class="basebutton" 
+    aria-label="回到顶部">
+    <i class="iconfont icon-arrowleft button-icon"></i>
+  </a>
+
+<a 
+  role="button" 
+  id="menubutton"
+  aria-label="menu button"
+  class="basebutton">
+  <i class="iconfont icon-menu button-icon"></i>
+</a>
+<a 
+  role="button" 
+  id="popbutton" 
+  class="basebutton" 
+  aria-label="控制中心">
+  <i class="iconfont icon-expand button-icon"></i>
+</a>
+<a 
+  role="button" 
+  id="darkbutton" 
+  class="basebutton darkwidget" 
+  aria-label="夜色模式">
+  <i class="iconfont icon-weather button-icon"></i>
+</a>
+<a 
+  role="button" 
+  id="searchbutton" 
+  class="basebutton searchwidget" 
+  aria-label="搜索">
+  <i class="iconfont icon-search button-icon"></i>
+</a> 
+     
+     
+     
+      <script>
+  var addImgLayout = function () {
+    var img = document.querySelectorAll('.post-content img')
+    var i
+    for (i = 0; i < img.length; i++) {
+      var wrapper = document.createElement('a')
+      wrapper.setAttribute('href', img[i].getAttribute('data-src'))
+      wrapper.setAttribute('aria-label', 'illustration')
+      wrapper.style.cssText =
+        'width: 100%; display: flex; justify-content: center;'
+      if (img[i].alt) wrapper.dataset.caption = img[i].alt
+      wrapper.dataset.nolink = true
+      img[i].before(wrapper)
+      wrapper.append(img[i])
+      var divWrap = document.createElement('div')
+      divWrap.classList.add('gallery')
+      wrapper.before(divWrap)
+      divWrap.append(wrapper)
+    }
+    baguetteBox.run('.gallery')
+  }
+</script>
+<script>
+  loadScript(
+    "/js/lib/lightbox/baguetteBox.min.js",
+    addImgLayout
+  )
+</script>
+ 
+     
+     
+    <script src="/js/main.js"></script> 
+     
+    
+      <script>
+        var addLazyload = function () {
+          var observer = lozad('.lozad', {
+            load: function (el) {
+              el.srcset = el.getAttribute('data-src')
+            },
+            loaded: function (el) {
+              el.classList.add('loaded')
+            },
+          })
+          observer.observe()
+        }
+      </script>
+      <script>
+        loadScript('/js/lib/lozad.min.js', addLazyload)
+      </script>
+     
+    
+    
+      <script>
+        setTimeout(() => {localSearch("search.json")}, 0)
+      </script>
+    
+  </body>
+</html>
